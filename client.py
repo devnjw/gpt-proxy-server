@@ -30,18 +30,15 @@ class ChatGPTClient:
         # 연결 종료
         self.connection.close()
 
-# 사용자한테서 인풋 받기
-model = input("Enter your message: ")
-
 client = ChatGPTClient(
     url="127.0.0.1",
-    port=8000,
+    port=8080,
     endpoint="/create/",
 )
 
 client.create(
-              model=model,
+              model="gpt-3.5-turbo",
               messages=[
-                  {"role": "user", "content": "count 1 to 100"},
+                  {"role": "user", "content": "Say this is a test."},
               ],
               stream=True,)
