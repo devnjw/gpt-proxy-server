@@ -21,3 +21,10 @@ OPENAI_API_KEY=<your openai api key>
 docker build -t gpt-proxy-server .
 docker run -it --rm --env-file .env -p 8080:8080 gpt-proxy-server
 ```
+
+### Test
+
+run client.py
+```bash
+python client.py
+```
